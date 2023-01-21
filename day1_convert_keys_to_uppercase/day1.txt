@@ -1,0 +1,34 @@
+
+const obj = {
+    "name":"Micky",
+    "age":11,
+    "likes":"Walking"
+}
+
+
+#######solution-1########
+
+function convertKeysToUpperCase(obj){
+    const entries =  Object.entries(obj);
+    const updatedEntry = entries.map(item => {
+        return [item[0].toUpperCase(),item[1]]
+    } )
+   return  Object.fromEntries(updatedEntry);
+}
+
+
+####### Solution 2 ########
+
+function convertKeysToUpperCase(obj){ 
+const keys = Object.keys(obj); 
+const newObj = {} 
+keys.map(key => { 
+   newObj[key.toUpperCase()] = obj[key]
+ }) 
+return newObj; 
+}
+convertKeysToUpperCase(obj)
+
+
+++++++++output++++++
+{NAME: 'Micky', AGE: 11, LIKES: 'Walking'} 

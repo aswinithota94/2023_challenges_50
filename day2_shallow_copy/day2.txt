@@ -1,0 +1,19 @@
+function data() {
+  const person = {
+    name: "Micky",
+    age: 11,
+  };
+
+  const person1 = person;
+  person1.name = "Aswini";
+
+  console.log(person.name);
+  console.log(person1.name);
+}
+
+++++++ outut +++++++
+
+data()
+
+ Aswini
+ Aswini
